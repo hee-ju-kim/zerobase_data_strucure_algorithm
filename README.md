@@ -11,4 +11,9 @@
   | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |--|--|
   | 1     | [집합](https://github.com/hee-ju-kim/dataStrucureAndAlgorithm/tree/main/01_%EA%B8%B0%EC%B4%88%EC%88%98%ED%95%99/01_%EC%A7%91%ED%95%A9)                                          |교집합, 합집합, 차집합|20240913|
   | 2     | [경우의 수](https://github.com/hee-ju-kim/dataStrucureAndAlgorithm/tree/main/01_%EA%B8%B0%EC%B4%88%EC%88%98%ED%95%99/02_%EA%B2%BD%EC%9A%B0%EC%9D%98%20%EC%88%98)                 |합의 법칙, 곱의 법칙|20240922|
+  | 3     | [순열](https://github.com/hee-ju-kim/dataStrucureAndAlgorithm/tree/main/01_%EA%B8%B0%EC%B4%88%EC%88%98%ED%95%99/03_%EC%88%9C%EC%97%B4))                                       
+  |팩토리얼, 순열, 중복순열, 원순열|20240922|
+  | 4     | [조합](https://github.com/hee-ju-kim/dataStrucureAndAlgorithm/tree/main/01_%EA%B8%B0%EC%B4%88%EC%88%98%ED%95%99/04_%EC%A1%B0%ED%95%A9)                                        
+  |조합, 중복조합|20240922|
 </details>
+
