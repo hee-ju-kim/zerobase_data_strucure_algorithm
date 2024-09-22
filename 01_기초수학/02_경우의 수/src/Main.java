@@ -7,6 +7,7 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		// 1. 합의 법칙
+		// n(A U B)  = n(A) + n(B) - n(A N B)
 		System.out.println("== 합의 법칙 ==");
 		// 두 개의 주사위를 던졌을 때 합이 3 또는 4의 배수일 경우의 수
 		
@@ -47,6 +48,7 @@ public class Main {
 		System.out.println("결과 " + allCase.size());
 		
 		// 2.곱의 법칙 
+		// n(A X B) = n(A) X n(B)
 		System.out.println("== 곱의 법칙 ==");
 		// 두 개의 주사위 a,b를 던졌을때 a는 3의배수, b는 4의 배수인 경우의 수
 		nA = 0;
