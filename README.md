@@ -1,4 +1,4 @@
-## 제로베이스 사전학습 - 기초수학/알고리즘
+## 제로베이스 - 기초수학/자료구조/알고리즘
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/hee-ju-kim/dataStrucureAndAlgorithm)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/hee-ju-kim/dataStrucureAndAlgorithm)
