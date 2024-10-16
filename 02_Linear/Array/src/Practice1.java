@@ -18,15 +18,14 @@ public class Practice1 {
 
         for (int i = 0; i < arr.length; i++) {
             if (i % 2 == 0) {
-                sumEven += i;
+                sumEven += arr[i];
                 sumEvenCnt++;
             } else {
-                sumOdd += i;
+                sumOdd += arr[i];
                 sumOddCnt++;
             }
         }
 
-        System.out.println(sumEven);
         System.out.printf("짝수 평균: %f\n", sumEven / sumEvenCnt);
         System.out.printf("홀수 평균: %f\n", sumOdd / sumOddCnt);
 

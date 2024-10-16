@@ -4,6 +4,7 @@
 
 // 입출력 예시)
 // 배열 arr: 1, 1, 100, 1, 1, 1, 100
+// target: 100
 // 결과: 6
 
 public class Practice2 {
@@ -11,17 +12,22 @@ public class Practice2 {
 
         int[] arr = {1, 1, 100, 1, 1, 1, 100};
         int target = 100;
-        int index = -1;
         int maxIndex = -1;
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i] == target) {
-                index = i;
-                if (index > maxIndex) {
-                    maxIndex = i;
-                }
+            if (arr[i] == target && i > maxIndex) {
+                maxIndex = i;
             }
         }
 
+        System.out.println("maxIndex " + maxIndex);
+
+        maxIndex = -1;
+        for (int i = arr.length - 1; i >= 0; i--) {
+            if (arr[i] == target) {
+                maxIndex = i;
+                break;
+            }
+        }
         System.out.println("maxIndex " + maxIndex);
     }
 }
