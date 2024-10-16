@@ -18,3 +18,14 @@
  
 </details>
 
+<details>
+  <summary>02. 선형 자료구조</summary>
+  
+  | No | 강의명 | 내용 | 날짜 |
+  | -- | ---------------------------------- |------------------------------------------|-------|
+  | 1  | [Array](https://github.com/hee-ju-kim/zerobase_data_strucure_algorithm/tree/main/02_Linear/Array) |배열 장단점 및 문제 풀이|20241016|
+
+ 
+</details>
+
+
