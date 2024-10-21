@@ -24,6 +24,9 @@
   | No | 강의명 | 내용 | 날짜 |
   | -- | ---------------------------------- |------------------------------------------|-------|
   | 1  | [Array](https://github.com/hee-ju-kim/zerobase_data_strucure_algorithm/tree/main/02_Linear/Array) |배열 장단점 및 문제 풀이|20241016|
+  | 2  | [LinkedList](https://github.com/hee-ju-kim/zerobase_data_strucure_algorithm/blob/main/02_Linear/LinkedList/src/readme.md) |LinkedList 장단점 |20241018|
+  | 3  | [Stack](https://github.com/hee-ju-kim/zerobase_data_strucure_algorithm/blob/main/02_Linear/Stack/src/readme.md) | Stack 장단점 |20241018|
+
 
  
 </details>
