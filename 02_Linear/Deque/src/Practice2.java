@@ -1,103 +1,51 @@
-// Practice2
-// 배열을 이용한 기본 데크 직접 구현
+// Practice1
+// Palindrome 찾기
+// Palindrome 이면 true, 아니면 false 를 반환하세요.
+// Palindrome: 앞으로 읽어도 거꾸로 읽어도 같은 문자열
 
-class MyDeque2 {
-    int[] arr;
-    int front = 0;
-    int rear = 0;
+// 입출력 예시)
+// 입력: a
+// 결과: true
 
-    MyDeque2(int size) {
-        this.arr = new int[size + 1];
-    }
+// 입력: madam
+// 결과: true
 
-    public boolean isEmpty() {
-        return this.rear == this.front;
-    }
+// 입력: abab
+// 결과: false
 
-    public boolean isFull() {
-        return (this.rear + 1)  % this.arr.length == this.front;
-    }
 
-    public void addFirst(int data) {
-        if (this.isFull()) {
-            System.out.println("Full");
-            return;
-        }
-
-        this.arr[front] = data;
-        this.front = (this.front - 1 + this.arr.length) % this.arr.length;
-    }
-
-    public void addLast(int data) {
-        if (this.isFull()) {
-            System.out.println("Full");
-            return;
-        }
-
-        this.rear = (this.rear + 1) % this.arr.length;
-        this.arr[this.rear] = data;
-    }
-
-    public Integer removeFirst() {
-        if (this.isEmpty()) {
-            System.out.println("Empty");
-            return null;
-        }
-
-        this.front = (this.front + 1) % this.arr.length;
-        return this.arr[this.front];
-    }
-
-    public Integer removeLast() {
-        if (this.isEmpty()) {
-            System.out.println("Empty");
-            return null;
-        }
-
-        int data = this.arr[this.rear];
-        this.rear = (this.rear - 1 + this.arr.length) % this.arr.length;
-        return data;
-    }
-
-    public void printDeque() {
-        int s = (this.front + 1) % this.arr.length;
-        int e = (this.rear + 1) % this.arr.length;
-
-        for (int i = s; i != e ; i = (i + 1) % this.arr.length) {
-            System.out.print(this.arr[i] + "  ");
-        }
-        System.out.println();
-    }
-
-}
+import java.util.ArrayDeque;
+import java.util.Deque;
 
 public class Practice2 {
+    public static boolean checkPalindrome(String str) {
+        Deque deque = new ArrayDeque();
+        boolean isPalindrome = true;
+
+        for (String s: str.split("")) {
+            deque.addFirst(s);
+        }
+
+        while (!deque.isEmpty()) {
+            String s1 = (String)deque.pollFirst();
+            String s2 = (String)deque.pollLast();
+
+            if (s1 != null && s2 != null && !s1.equals(s2)) {
+                isPalindrome = false;
+                break;
+            }
+        }
+        return isPalindrome;
+    }
+
     public static void main(String[] args) {
         // Test code
-        MyDeque2 myDeque = new MyDeque2(5);
-        // Front 부분 입력
-        myDeque.addFirst(1);
-        myDeque.addFirst(2);
-        myDeque.addFirst(3);
-        myDeque.printDeque();   // 3 2 1
-
-        // Rear 부분 입력
-        myDeque.addLast(10);
-        myDeque.addLast(20);
-        myDeque.addLast(30);    // Deque is full!
-        myDeque.printDeque();        // 3 2 1 10 20
-
-        // Front 부분 출력
-        System.out.println(myDeque.removeFirst());  // 3
-        myDeque.printDeque();   // 2 1 10 20
-
-        // Rear 부분 출력
-        System.out.println(myDeque.removeLast());   // 20
-        myDeque.printDeque();    // 2 1 10
-
-        System.out.println(myDeque.removeLast());   // 10
-        System.out.println(myDeque.removeLast());   // 1
-        System.out.println(myDeque.removeLast());   // 2
-        System.out.println(myDeque.removeLast());   // Deque is empty!
+        System.out.println(checkPalindrome("a"));       // true
+        System.out.println(checkPalindrome("aba"));     // true
+        System.out.println(checkPalindrome("abba"));    // true
+        System.out.println(checkPalindrome("abab"));    // false
+        System.out.println(checkPalindrome("abcba"));   // true
+        System.out.println(checkPalindrome("abccba"));  // true
+        System.out.println(checkPalindrome("madam"));  // true
     }
 }

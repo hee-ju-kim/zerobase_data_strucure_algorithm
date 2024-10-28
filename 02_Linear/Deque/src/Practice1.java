@@ -1,85 +1,52 @@
 // Practice1
-// ArrayList 를 이용한 데크 구현
+// 데이터 재정렬
+// D_0 -> D_1 -> ... -> D_n-1 -> D_n 순으로 되어 있는 데이터를
+// D_0 -> D_n -> D_1 -> D_n-1 -> ... 순이 되도록 재정렬 하시오.
 
+// 입력 예시)
+// 입력 데이터: 1 -> 2 -> 3 -> 4 -> 5
+// 출력 데이터: 1 -> 5 -> 2 -> 4 -> 3
+
+
+import java.util.ArrayDeque;
 import java.util.ArrayList;
-
-class MyDeque1 {
-    ArrayList list;
-
-    MyDeque1() {
-        this.list = new ArrayList();
-    }
-
-    public boolean isEmpty() {
-        if(this.list.size() == 0) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    public void addFirst(int data) {
-        this.list.add(0, data);
-    }
-
-    public void addLast(int data) {
-        this.list.add(data);
-    }
-
-    public Integer removeFirst() {
-        if (this.isEmpty()) {
-            System.out.println("Empty");
-            return null;
-        }
-        int data = (int)this.list.get(0);
-        this.list.remove(0);
-        return data;
-    }
-
-    public Integer removeLast() {
-        if (this.isEmpty()) {
-            System.out.println("Empty");
-            return null;
-        }
-        int data = (int)this.list.get(this.list.size() - 1);
-        this.list.remove(this.list.size() - 1);
-        return data;
-    }
-
-    public void printDeque() {
-        System.out.println(this.list);
-    }
-
-}
+import java.util.Deque;
+import java.util.stream.IntStream;
 
 public class Practice1 {
+    public static void reorderData(int[] arr) {
+        Deque deque = new ArrayDeque();
+        ArrayList result = new ArrayList();
+        IntStream.of(arr).forEach(x -> deque.addLast(x));
+
+        System.out.println(deque);
+        while(!deque.isEmpty()) {
+            result.add(deque.removeFirst());
+
+            if (!deque.isEmpty()) {
+                result.add(deque.removeLast());
+            }
+        }
+
+        System.out.println("== 정렬 전 ==");
+        print(arr);
+        System.out.println("== 정렬 후 ==");
+        print(result.stream().mapToInt(x -> (int)x).toArray());
+    }
+
+    public static void print(int arr[]) {
+        for (int i = 0; i < arr.length -1 ; i++) {
+            System.out.print(arr[i] + " => ");
+        }
+        System.out.println(arr[arr.length - 1]);
+    }
+
     public static void main(String[] args) {
         // Test code
-        MyDeque1 myDeque = new MyDeque1();
-        // Front 부분 입력
-        myDeque.addFirst(1);
-        myDeque.addFirst(2);
-        myDeque.addFirst(3);
-        myDeque.printDeque();    // 3 2 1
+        int[] arr = {1, 2, 3, 4, 5};
+        reorderData(arr);   // 1 -> 5 -> 2 -> 4 -> 3
 
-        // Rear 부분 입력
-        myDeque.addLast(10);
-        myDeque.addLast(20);
-        myDeque.addLast(30);
-        myDeque.printDeque();    // 3 2 1 10 20 30
-
-        // Front 부분 출력
-        System.out.println(myDeque.removeFirst());  // 3
-        myDeque.printDeque();    // 2 1 10 20 30
-
-        // Rear 부분 출력
-        System.out.println(myDeque.removeLast());   // 30
-        myDeque.printDeque();    // 2 1 10 20
-
-        System.out.println(myDeque.removeLast());   // 20
-        System.out.println(myDeque.removeLast());   // 10
-        System.out.println(myDeque.removeLast());   // 1
-        System.out.println(myDeque.removeLast());   // 2
-        myDeque.printDeque();
+        int[] arr2 = {1, 2, 3, 4, 5, 6, 7};
+        reorderData(arr2);  // 1 -> 7 -> 2 -> 6 -> 3 -> 5 -> 4
     }
 }
