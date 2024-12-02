@@ -1,6 +1,7 @@
-// 선형 자료 구조 - 연결리스트
-// 단순 연결 리스트 기본 구조 구현
+// 선형 자료구조 - 연결 리스트
+// 단순 연결 리스트 (simple ver.) 기본 구조 구현
 
+// 노드
 class Node {
     int data;
     Node next;
@@ -15,19 +16,20 @@ class Node {
 class LinkedList {
     Node head;
 
-    public LinkedList (Node node) {
+    LinkedList() {}
+    LinkedList(Node node) {
         this.head = node;
     }
 
-    // 연결 리스트 비어있는지 확인
-    public  boolean isEmpty () {
+    //  연결 리스트 비어있는지 확인
+    public boolean isEmpty() {
         if (this.head == null) {
             return true;
         }
         return false;
     }
 
-    // 연결 리스트의 맨 뒤에 데이터 추가
+    //  연결 리스트의 맨 뒤에 데이터 추가
     public void addData(int data) {
         if (this.head == null) {
             this.head = new Node(data, null);
@@ -40,7 +42,7 @@ class LinkedList {
         }
     }
 
-    // 연결 리스트의 맨 뒤의 데이터 삭제
+    //  연결 리스트의 맨 뒤의 데이터 삭제
     public void removeData() {
         if (this.isEmpty()) {
             System.out.println("List is empty");
@@ -62,8 +64,8 @@ class LinkedList {
         }
     }
 
-    // 연결 리스트에서 데이터 찾기
-    public  void findData(int data) {
+    //  연결 리스트에서 데이터 찾기
+    public void findData(int data) {
         if (this.isEmpty()) {
             System.out.println("List is empty");
             return;
@@ -72,7 +74,7 @@ class LinkedList {
         Node cur = this.head;
         while (cur != null) {
             if (cur.data == data) {
-                System.out.println("Data exist");
+                System.out.println("Data exist!");
                 return;
             }
             cur = cur.next;
@@ -80,15 +82,15 @@ class LinkedList {
         System.out.println("Data not found!");
     }
 
-    // 연결 리스트의 모든 데이터 출력
+    //  연결 리스트의 모든 데이터 출력
     public void showData() {
         if (this.isEmpty()) {
-            System.out.println("List is empty");
+            System.out.println("List is empty!");
             return;
         }
 
         Node cur = this.head;
-        while(cur != null) {
+        while (cur != null) {
             System.out.print(cur.data + " ");
             cur = cur.next;
         }
@@ -96,27 +98,33 @@ class LinkedList {
     }
 }
 
+
 public class Main {
+
     public static void main(String[] args) {
+
+//      Test Code
         LinkedList myList = new LinkedList(new Node(1, null));
-        myList.showData();
+        myList.showData();      // 1
 
         myList.addData(2);
         myList.addData(3);
         myList.addData(4);
         myList.addData(5);
-        myList.showData();
+        myList.showData();      // 1 2 3 4 5
 
-        myList.findData(3);
-        myList.findData(100);
-
-        myList.removeData();
-        myList.removeData();
-        myList.removeData();
-        myList.showData();
+        myList.findData(3);     // Data exist!
+        myList.findData(100);   // Data not found!
 
         myList.removeData();
         myList.removeData();
         myList.removeData();
+        myList.showData();      // 1 2
+
+        myList.removeData();
+        myList.removeData();
+        myList.removeData();    // List is empty
+
     }
+
 }
