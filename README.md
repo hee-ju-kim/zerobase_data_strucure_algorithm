@@ -39,6 +39,8 @@
   | No | 강의명 | 내용 | 날짜 |
   | -- | ---------------------------------- |------------------------------------------|-------|
   | 1  | [정렬](https://github.com/hee-ju-kim/zerobase_data_strucure_algorithm/tree/main/04_Algorithm/Sorting)| 버블, 삽입, 선택, 합병, 힙, 퀵정렬 | 20241126 |
+  | 2  | [이진탐색](https://github.com/hee-ju-kim/zerobase_data_strucure_algorithm/tree/main/04_Algorithm/BinarySearch)| 이진탐색 | 20241127 |
+  | 3  | [투포인터](https://github.com/hee-ju-kim/zerobase_data_strucure_algorithm/tree/main/04_Algorithm/TwoPointers)| 투포인터 | 20241127 |
 </details>
 
 
