@@ -30,6 +30,7 @@
   | 4  | [Queue](https://github.com/hee-ju-kim/zerobase_data_strucure_algorithm/blob/main/02_Linear/Queue/src/readme.md) | Queue 장단점 및 문제풀이 |20241021|
   | 5  | [Deaue](https://github.com/hee-ju-kim/zerobase_data_strucure_algorithm/blob/main/02_Linear/Deque/src/readme.md) | Deque 장단점 |20241021|
   | 6  | [LinkedList](https://github.com/hee-ju-kim/zerobase_data_strucure_algorithm/tree/main/02_Linear/LinkedList/src/readme.md) | LinkedList 장단점 및 문제풀이 |20241202|
+  | 7  | [Hashtable](https://github.com/hee-ju-kim/zerobase_data_strucure_algorithm/tree/main/02_Linear/HashTable) | Hashtable 장단점 및 문제풀이 |20241202|
  
 </details>
 
