@@ -35,6 +35,17 @@
 </details>
 
 <details>
+  <summary>03. 비선형 자료구조</summary>
+  
+  | No | 강의명 | 내용 | 날짜 |
+  | -- | ---------------------------------- |------------------------------------------|-------|
+  | 1  | [트리](https://github.com/hee-ju-kim/zerobase_data_strucure_algorithm/tree/main/03_NonLinear/Tree/src) | 트리 장단점 및 문제 풀이|20241209|
+  | 2  | [그래프](https://github.com/hee-ju-kim/zerobase_data_strucure_algorithm/tree/main/03_NonLinear/Graph) |그래프 장단점 및 문제 풀이 |20241209|
+  | 3  | [우선순위큐](https://github.com/hee-ju-kim/zerobase_data_strucure_algorithm/tree/main/03_NonLinear/PriorityQueue) | 우선순위 큐 장단점 및 문제 풀이 |20241210|
+ 
+</details>
+
+<details>
   <summary>04. 알고리즘</summary>
   
   | No | 강의명 | 내용 | 날짜 |
@@ -42,6 +53,7 @@
   | 1  | [정렬](https://github.com/hee-ju-kim/zerobase_data_strucure_algorithm/tree/main/04_Algorithm/Sorting)| 버블, 삽입, 선택, 합병, 힙, 퀵정렬 | 20241126 |
   | 2  | [이진탐색](https://github.com/hee-ju-kim/zerobase_data_strucure_algorithm/tree/main/04_Algorithm/BinarySearch)| 이진탐색 | 20241127 |
   | 3  | [투포인터](https://github.com/hee-ju-kim/zerobase_data_strucure_algorithm/tree/main/04_Algorithm/TwoPointers)| 투포인터 | 20241127 |
+  | 3  | [그리드](https://github.com/hee-ju-kim/zerobase_data_strucure_algorithm/tree/main/04_Algorithm/Greedy)| 그리드 | 20241210 |
 </details>
 
 
